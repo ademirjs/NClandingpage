@@ -16,6 +16,8 @@
     <title>NãoContratei! - Evite Cobranças Bancárias Indevidas</title>
     <link rel="stylesheet" href="styles.css" />
 
+
+
     <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
@@ -55,11 +57,12 @@
                   Descubra agora se você também está entre os 30% dos brasileiros
                   vítimas de <strong>cobranças indevidas</strong>.
                 </p>
-                <form action="/analise" method="post" class="lead-form">
+                <form action="https://naocontratei-homolog.devlivery.com.br/lead/lp/create" method="post" class="lead-form" x-data>
                   <div class="lead-form__input-container">
                     <img src="./assets/icon-user.svg" alt="Icone de usuario" />
                     <input
                       type="text"
+                      name="nome"
                       required
                       placeholder="Digite seu nome"
                       class="lead-form__input"
@@ -69,7 +72,8 @@
                   <div class="lead-form__input-container">
                     <img src="./assets/icon-email.svg" alt="Icone do email" />
                     <input
-                      type="text"
+                      type="email"
+                      name="email"
                       required
                       placeholder="Digite seu melhor e-mail"
                       class="lead-form__input"
@@ -79,13 +83,17 @@
                   <div class="lead-form__input-container">
                     <img src="./assets/icon-what.svg" alt="Icone do WhatsApp" />
                     <input
-                      type="tel"
+                      name="telefone"
+                      x-mask="(99) 99999-9999"
                       required
                       placeholder="Digite seu número de WhatsApp"
                       class="lead-form__input"
                     />
                   </div>
-      
+                    <input type="hidden" name="origin" value="LP1_BANCARIO" />
+                    <input type="hidden" name="formulario_id" value="9c8a6be9-0897-4885-a6e9-c2b799f741ea" />
+
+
                   <button type="submit" class="bnt-primary">
                     <span>Quero uma análise agora</span>
                     <img
@@ -192,5 +200,11 @@
         </a>
       </section>
     </footer>
+
+    <!-- Alpine Plugins -->
+   <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>
+
+   <!-- Alpine Core -->
+   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </body>
 </html>
