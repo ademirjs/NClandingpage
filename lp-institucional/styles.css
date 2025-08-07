@@ -150,6 +150,112 @@ main{
   max-width: 100%;
   border-radius: 0  0 24px 24px;
 }
+/* Serviços */
+.tools{
+  width: 100%;
+  padding: 4rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tools_container{
+  max-width: 1246px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+.tools__grid{
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.tools__title{
+  font-size: 32px;
+  max-width: 600px;
+  line-height: 120%;
+  text-align: center;
+  color: var(--secondary-color);
+}
+.tools__grid .card-service{
+  border: 2px solid #EDF7FF;
+  gap: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-service, .card-outros{
+  width: 32%;
+  min-height: 218px;
+  padding: 32px;
+  border-radius: 8px;
+}
+
+.card-icon{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-icon span{
+  background: var(--secondary-color);
+  border-radius: 100px;
+  color: var(--white-color);
+
+  padding: 2px 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.card-icon img{
+  width: 24px;
+}
+
+.card-text{
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.card-text h3{
+  color: var(--secondary-color);
+  font-size: 20px;
+}
+.card-text p{
+  color: #777777;
+}
+
+.card-outros{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+  background: transparent;
+}
+
+.card-outros:hover, .tools__grid .card-service:hover{
+  transition: all 0.5s;
+  background: #EDF7FF;
+}
+
+.card-outros h3{
+    color: var(--secondary-color);
+   font-size: 20px;
+}
+.card-outros p{
+   text-align: center;
+   color: #777777;
+   font-size: 14px;
+   line-height: 140%;
+}
 
 /* Como Funciona */
 .steps {
@@ -362,6 +468,20 @@ footer .footer-contact p {
     text-align: center;
   }
 
+  .tools__title{
+    font-size: 24px;
+  }
+
+  .tools__grid{
+    flex-direction: column;
+  }
+
+  .tools__grid .card-service, .card-outros {
+    width: 100%;
+    min-height: auto;
+    padding: 16px;
+  }
+
   footer .footer-info {
     flex-direction: column;
     gap: 2rem;
@@ -409,7 +529,16 @@ footer .footer-contact p {
 /* Tablet (481px a 768px) */
 @media screen and (min-width: 481px) and (max-width: 768px) {
 
+  .tools h2 {
+    font-size: 28px;
+  }
 
+  .card-service, .card-outros {
+    width: 44%;
+    padding: 24px;
+    gap: 8px;
+  }
+  
   .link-hidden{
     display: none;
   }
