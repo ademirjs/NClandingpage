@@ -10,13 +10,11 @@
     <meta name="author" content="NãoContratei!" />
     <meta property="og:title" content="NãoContratei! - Evite Cobranças Bancárias Indevidas" />
     <meta property="og:description" content="Descubra se você está pagando por serviços bancários que nunca contratou." />
-    <meta property="og:image" content="/assets/share-image.png" />
+    <meta property="og:image" content="/assets/share-image.jpg" />
     <meta property="og:url" content="http://lp1.naocontratei.com.br/" />
     <meta name="twitter:card" content="summary_large_image" />
     <title>NãoContratei! - Evite Cobranças Bancárias Indevidas</title>
     <link rel="stylesheet" href="styles.css" />
-
-
 
     <!-- Fonts -->
     <link
@@ -48,7 +46,7 @@
     </header>
 
     <main>
-      <section class="hero">
+      <section id="headline" class="hero">
         <div class="hero__content">
             <div class="content-text">
                 <h1>Cobranças Bancárias</h1>
@@ -94,7 +92,7 @@
                     <input type="hidden" name="formulario_id" value="9c8a6be9-0897-4885-a6e9-c2b799f741ea" />
 
 
-                  <button type="submit" class="bnt-primary">
+                  <button type="submit" class="bnt bnt-primary-form">
                     <span>Quero uma análise agora</span>
                     <img
                       src="./assets/icon-arrow.svg"
@@ -106,76 +104,80 @@
         </div>
       </section>
 
-      <section class="tools">
-        <div class="tools_container">
-          <h2 class="tools__title">Veja como podemos ajudar você a recuperar o que é seu!</h2>
-          <div class="tools__grid">
-            <a href="" class="card-service">
-              <div class="card-icon">
-                <img src="./assets/icon-money-orange.svg" alt="Ícone de Banco" />
-              </div>
-              <div class="card-text">
-                <h3>Cobrança Bancária</h3>
-                <p>Verifique se há cobranças indevidas em sua conta telefônica.</p>
-              </div>
-            </a>
-    
-            <a href="" class="card-service">
-              <div class="card-icon">
-                <img src="./assets/icon-phone.svg" alt="Ícone de Telefone" />
-              </div>
-              <div class="card-text">
-                <h3>Cobrança Telefônica</h3>
-                <p>Verifique se há cobranças indevidas em sua conta telefônica.</p>
-              </div>
-            </a>
-    
-            <a href="" class="card-service">
-              <div class="card-icon">
-                <img src="./assets/icon-tv.svg" alt="Ícone de TV" />
-    
-                <span>Em breve</span>
-              </div>
-              <div class="card-text">
-                <h3>Cobrança de TV</h3>
-                <p>Verifique se há cobranças indevidas em sua conta de TV.</p>
-              </div>
-            </a>
-    
-            <a href="" class="card-service">
-              <div class="card-icon">
-                <img src="./assets/icon-water.svg" alt="Ícone de gota de água" />
-    
-                <span>Em breve</span>
-              </div>
-              <div class="card-text">
-                <h3>Cobrança de Água</h3>
-                <p>Verifique se há cobranças indevidas em sua conta de água.</p>
-              </div>
-            </a>
-            <a href="" class="card-service">
-              <div class="card-icon">
-                <img src="./assets/icon-internet.svg" alt="Ícone de Internet" />
-    
-                <span>Em breve</span>
-              </div>
-              <div class="card-text">
-                <h3>Cobrança de Internet</h3>
-                <p>Verifique se há cobranças indevidas em sua conta de Internet.</p>
-              </div>
-            </a>
-            <a href="" class="card-outros">
-              <h3>Não contratei, mas paguei?</h3>
-              <p>Recupere seu dinheiro de cobranças indevidas com especialistas!</p>
-              <button type="submit" class="bnt-primary">
-                <span>Solicitar Análise Gratuita</span>
-                <img
-                  src="./assets/icon-arrow.svg"
-                  alt="Seta apontando para a direita"
-                />
-              </button>
-            </a>
+      <section id="steps">
+        <div class="container steps-container">
+          <h2>Como Funciona?</h2>
+          <div class="list-steps">
+            <div class="step">
+              <img src="./assets/icon-formulario.svg" alt="Ícone de formulário">
+              <p>Você preenche o formulário com seus dados básicos</p>
+            </div>
+            <div class="step">
+              <img src="./assets/icon-analise.svg" alt="Ícone de análise">
+              <p>Nossa equipe faz uma análise gratuita do seu histórico bancário</p>
+            </div>
+            <div class="step">
+              <img src="./assets/icon-decisao.svg" alt="Ícone de decisão">
+              <p>Se for constatada cobrança indevida, você decide se quer seguir com o processo</p>
+            </div>
+            <div class="step">
+              <img src="./assets/icon-pagamento.svg" alt="Ícone de pagamento">
+              <p><span>Só paga se receber</span> — sem riscos pra você</p>
+            </div>
           </div>
+          <a href="#headline" class="bnt btn-primary">Quero uma análise agora</a>
+        </div>
+      </section>
+  
+      <section id="cases">
+        <div class="container cases_container">
+          <h2>Você pode ser compensado nos casos de...</h2>
+          <div class="cases-grid">
+            <article class="case">
+              <i class="case_icon">
+                <img src="./assets/money-dollar.svg" alt="icon" class="case_icon">  
+              </i>
+              <h3>Não contratei, mas paguei</h3>
+              <p>BMC é uma reserva de margem que permite que bancos façam novos empréstimos em seu nome.</p>
+            </article>
+            <article class="case">
+              <i class="case_icon">
+                <img src="./assets/money-dollar.svg" alt="icon" class="case_icon">  
+              </i>
+              <h3>Não contratei, mas paguei</h3>
+              <p>BMC é uma reserva de margem que permite que bancos façam novos empréstimos em seu nome.</p>
+            </article>
+            <article class="case">
+              <i class="case_icon">
+                <img src="./assets/money-dollar.svg" alt="icon" class="case_icon">  
+              </i>
+              <h3>Não contratei, mas paguei</h3>
+              <p>BMC é uma reserva de margem que permite que bancos façam novos empréstimos em seu nome.</p>
+            </article>
+            <article class="case">
+              <i class="case_icon">
+                <img src="./assets/money-dollar.svg" alt="icon" class="case_icon">  
+              </i>
+              <h3>Não contratei, mas paguei</h3>
+              <p>BMC é uma reserva de margem que permite que bancos façam novos empréstimos em seu nome.</p>
+            </article>
+            <article class="case">
+              <i class="case_icon">
+                <img src="./assets/money-dollar.svg" alt="icon" class="case_icon">  
+              </i>
+              <h3>Não contratei, mas paguei</h3>
+              <p>BMC é uma reserva de margem que permite que bancos façam novos empréstimos em seu nome.</p>
+            </article>
+            <article class="case">
+              <i class="case_icon">
+                <img src="./assets/money-dollar.svg" alt="icon" class="case_icon">  
+              </i>
+              <h3>Não contratei, mas paguei</h3>
+              <p>BMC é uma reserva de margem que permite que bancos façam novos empréstimos em seu nome.</p>
+            </article>
+  
+          </div>
+          <a href="#headline" class="bnt btn-primary">Quero uma análise agora</a>
         </div>
       </section>  
     </main>
@@ -188,10 +190,10 @@
           <a href="https://www.instagram.com/nao.contratei/" aria-label="Instagram">
             <img src="./assets/icon-instagram.svg" alt="Ícone do Instagram" />
           </a>
-          <a href="https://www.facebook.com" aria-label="Facebook">
+          <a href="https://www.instagram.com/nao.contratei/" aria-label="Facebook">
             <img src="./assets/icon-facebook.svg" alt="Ícone do Facebook" />
           </a>
-          <a href="https://www.linkedin.com" aria-label="LinkedIn">
+          <a href="https://www.instagram.com/nao.contratei/" aria-label="LinkedIn">
             <img src="./assets/icon-linkedlin.svg" alt="Ícone do LinkedIn" />
           </a>
         </div>
