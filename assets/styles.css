@@ -198,6 +198,17 @@ main .hero{
     color: var(--placeholder-color);
 }
 
+.lead-form__input-container.error {
+    border-color: #ff3b30;
+}
+
+.input-error {
+    color: #ff3b30;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    margin-left: auto;
+}
+
 .bnt{
     padding: 16px 32px;
     border-radius: 100px;

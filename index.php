@@ -69,47 +69,94 @@
                     Descubra agora se você também está entre os 30% dos brasileiros
                     vítimas de <strong>cobranças indevidas</strong>.
                 </p>
-                <form action="https://naocontratei.test/lead/lp/create" method="post" class="lead-form" x-data>
-                    <div class="lead-form__input-container">
+                <form action="https://naocontratei.test/lead/lp/create" method="post" class="lead-form" x-data="{
+                    nome: '',
+                    email: '',
+                    telefone: '',
+                    nomeError: false,
+                    emailError: false,
+                    telefoneError: false,
+                    validateName() {
+                        this.nomeError = this.nome.trim().length < 3;
+                        return !this.nomeError;
+                    },
+                    validateEmail() {
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        this.emailError = !emailRegex.test(this.email);
+                        return !this.emailError;
+                    },
+                    validatePhone() {
+                        // Remove todos os caracteres não numéricos
+                        const numeros = this.telefone.replace(/\D/g, '');
+                        // Verifica se tem exatamente 11 dígitos (DDD + número)
+                        this.telefoneError = numeros.length !== 11;
+                        return !this.telefoneError;
+                    },
+                    submitForm(e) {
+                        const nameValid = this.validateName();
+                        const emailValid = this.validateEmail();
+                        const phoneValid = this.validatePhone();
+
+                        if (!nameValid || !emailValid || !phoneValid) {
+                            e.preventDefault();
+                        }
+                    }
+                }">
+                    <div class="lead-form__input-container" :class="{'error': nomeError}">
                         <img src="./assets/icon-user.svg" alt="Icone de usuario" />
                         <input
                                 type="text"
                                 name="nome"
                                 required
+                                x-model="nome"
+                                @input="nomeError = false"
                                 placeholder="Digite seu nome"
                                 class="lead-form__input"
                         />
+                        <template x-if="nomeError">
+                            <span class="input-error">Mínimo de 3 caracteres</span>
+                        </template>
                     </div>
 
 
-                    <div class="lead-form__input-container">
+                    <div class="lead-form__input-container" :class="{'error': emailError}">
                         <img src="./assets/icon-email.svg" alt="Icone do email" />
                         <input
                                 type="email"
                                 name="email"
                                 required
+                                x-model="email"
+                                @input="emailError = false"
                                 placeholder="Digite seu melhor e-mail"
                                 class="lead-form__input"
                         />
+                        <template x-if="emailError">
+                            <span class="input-error">E-mail inválido</span>
+                        </template>
                     </div>
 
-                    <div class="lead-form__input-container">
+                    <div class="lead-form__input-container" :class="{'error': telefoneError}">
                         <img src="./assets/icon-what.svg" alt="Icone do WhatsApp" />
                         <input
                                 type="tel"
                                 name="telefone"
                                 x-mask="(99) 99999-9999"
+                                x-model="telefone"
                                 required
+                                @input="telefoneError = false"
                                 placeholder="Digite seu número de WhatsApp"
                                 class="lead-form__input"
                         />
+                        <template x-if="telefoneError">
+                            <span class="input-error">Telefone inválido</span>
+                        </template>
                     </div>
 
                     <input type="hidden" name="origin" value="LP1_BANCARIO" />
                     <input type="hidden" name="formulario_id" value="01991754-6600-719b-8bd6-38435e8857c7" />
 
-                    <button type="submit" class="bnt bnt-primary-form" >
-                        <span >Quero uma análise agora</span>
+                    <button type="submit" class="bnt bnt-primary-form" @click="submitForm($event)">
+                        <span>Quero uma análise agora</span>
                         <img
                                 src="./assets/icon-arrow.svg"
                                 alt="Seta apontando para a direita"
