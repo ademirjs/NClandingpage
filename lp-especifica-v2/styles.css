@@ -124,7 +124,7 @@ main .hero{
 }
 
 .content-text{
-  width: 550px;
+  width: 600px;
 
   display: flex;
   flex-direction: column;
@@ -144,16 +144,17 @@ main .hero{
 }
 
 .hero__content h2{
-  font-size: 50px;
-  line-height: 120%;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-size: 54px;
+  line-height: 110%;
+  font-weight: 400;
   color: var(--white-color);
 }
+
 
 .hero__content p{
   font-family: 'Inter', sans-serif;
   font-size: 20px;
+  line-height: 140%;
   color: var(--white-color);
 }
 
