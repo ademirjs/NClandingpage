@@ -124,14 +124,14 @@ main .hero{
 }
 
 .content-text{
-  width: 530px;
+  width: 600px;
 
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.hero__content h1{
+.hero__content h2{
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 2.52px;
@@ -143,7 +143,7 @@ main .hero{
   padding: 2px 12px;
 }
 
-.hero__content h2{
+.hero__content h1{
   font-size: 50px;
   line-height: 100%;
   font-weight: 500;
@@ -281,56 +281,114 @@ main .hero{
 .step p {
   font-size: 18px;
 }
-
-/* Casos */
-.cases_container {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
-.cases-grid {
-  display: grid;
+/* tools */
+/* Serviços */
+.tools{
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
-.case {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  padding: 6rem 1.25rem;
   display: flex;
-  gap: 12px;
   flex-direction: column;
-  align-items: start;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.case_icon{
-  background: var(--primary-color);
+.tools_container{
+  max-width: 1246px;
+
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+.tools__grid{
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  border-radius: 100%;
-  width: 58px;
-  height: 58px;
 }
 
-
-.case h3 {
-  font-size: 20px;
+.tools__title{
+  font-size: 32px;
+  max-width: 600px;
+  line-height: 120%;
+  text-align: center;
   color: var(--secondary-color);
 }
+.tools__grid .card-service{
+  border: 2px solid #EDF7FF;
+  gap: 14px;
+  display: flex;
+  flex-direction: column;
+}
 
-.case p {
-  font-size: 16px;
-  color: #777;
-  text-align: start;
+.card-service, .card-outros{
+  width: 32%;
+  min-height: 218px;
+  padding: 32px;
+  border-radius: 8px;
+}
+
+.card-icon{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-icon span{
+  background: var(--secondary-color);
+  border-radius: 100px;
+  color: var(--white-color);
+
+  padding: 2px 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.card-icon img{
+  width: 24px;
+}
+
+.card-text{
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.card-text h3{
+  color: var(--secondary-color);
+  font-size: 20px;
+}
+.card-text p{
+  color: #777777;
+}
+
+.card-outros{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  background: transparent;
+}
+
+.card-outros:hover, .tools__grid .card-service:hover{
+  transition: all 0.5s;
+  background: #EDF7FF;
+}
+
+.card-outros h3{
+    color: var(--secondary-color);
+   font-size: 20px;
+}
+.card-outros p{
+   text-align: center;
+   color: #777777;
+   font-size: 16px;
+   line-height: 140%;
 }
 
 /* Footer */
@@ -343,17 +401,26 @@ footer{
   align-items: center;
   color: var(--white-color);
   background: var(--secondary-color);
-  font-size: 14px;
+
 }
 
+
+footer section p{
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 footer section{
   width: 100%;
   max-width: 1246px;
   display: flex;
   flex-direction: row;
   align-content: center;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
+
 
 .footer__social-media{
   display: flex;
@@ -361,7 +428,7 @@ footer section{
 }
 
 .footer__social-media img{
-  width: 24px;
+  width: 32px;
   height: 100%;
 }
 
@@ -412,6 +479,21 @@ footer section{
   .cases-grid {
         grid-template-columns: repeat(1, 1fr);
         
+  }
+
+
+  .tools__title{
+    font-size: 24px;
+  }
+
+  .tools__grid{
+    flex-direction: column;
+  }
+
+  .tools__grid .card-service, .card-outros {
+    width: 100%;
+    min-height: auto;
+    padding: 16px;
   }
 
   #cases{
@@ -487,6 +569,12 @@ footer section{
     font-size: 16px;
   }
 
+  
+ .card-service, .card-outros {
+    width: 44%;
+    padding: 24px;
+    gap: 8px;
+  }
  
   .list-steps {
     flex-direction: column;
