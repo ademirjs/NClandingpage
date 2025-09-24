@@ -441,7 +441,7 @@ footer section{
     background-position-y: top;
     background-repeat: no-repeat;
     background-color: var(--secondary-color);
-    padding-top: 380px;
+    padding-top: 60%;
     padding-bottom: 4rem;
   }
 
